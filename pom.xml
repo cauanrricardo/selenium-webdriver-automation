@@ -13,7 +13,7 @@
 
     <modules>
         <module>01-webdriver-basics</module>
-        <module>02-test</module>
+        <module>02-understanding-html-dom</module>
     </modules>
 
     <properties>
