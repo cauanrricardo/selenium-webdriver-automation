@@ -38,10 +38,10 @@ public class FooterLinkTest {
         //store the current window handle
         String originalWindow = driver.getWindowHandle();
 
-        //is the handle different of originalWindow?
+        //is the handle different from originalWindow?
         for (String windowHandle : driver.getWindowHandles()) {
             if (!windowHandle.equals(originalWindow)) {
-                driver.switchTo().window(windowHandle);// yes, change the focus to the new window
+                driver.switchTo().window(windowHandle);// change focus to the new window
                 break;  // stop looping, the new window was found
             }
         }
@@ -52,7 +52,7 @@ public class FooterLinkTest {
 
         // Verify that the URL contains 'github.com'
         assertTrue(driver.getCurrentUrl().contains("github.com"),
-                "ERRO: don´t direction to github");
+                "ERRO: Did not redirect to github");
 
         // Switch back to the original window
         driver.switchTo().window(originalWindow);

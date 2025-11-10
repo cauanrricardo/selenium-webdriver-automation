@@ -29,7 +29,7 @@ public class DisableLoginTest {
         WebElement button = driver.findElement(By.xpath("//button[@type='button']"));
         assertTrue(button.isDisplayed(), "Button is on");
         assertFalse(button.isEnabled(), "Button in not enable to click");
-        //TEST FAILED - EXIST A BUG IN THE SYSTEM
+        //TEST FAILED - THERE IS A BUG IN THE SYSTEM
     }
 
 }
