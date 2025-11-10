@@ -1,11 +1,10 @@
 
 ## 📂 Project Structure
 
-* `01-webdriver-basics`
+The source code is located in the `main/test` directory under the package `br.com.cauan`.
 
 
   ##  Exercise Summary
-
 
   | Exercise                    | Topic              | Description                                                     |
   | :-------------------------- | :----------------- | :-------------------------------------------------------------- |
