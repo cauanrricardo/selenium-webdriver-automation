@@ -3,7 +3,7 @@
 The source code is located in the `main/java` directory under the package `br.com.cauan`.
 The `br.com.cauan` package contains two main classes:
 
-### 2. `DriverFactory.java`
+###  `DriverFactory.java`
 
 * **Purpose:** This class is designed to be a utility for **code reuse** in managing WebDriver instances.
 * **Functionality:**
