@@ -29,14 +29,6 @@
             <version>4.23.0</version>
         </dependency>
 
-        <!-- JUnit 5 -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -54,9 +46,12 @@
                 <version>3.1.2</version>
                 <configuration>
                     <includes>
+                        <include>**/*Tests.java</include>
                         <include>**/*Test.java</include>
                     </includes>
+                    <testNGArtifactName>org.testng:testng</testNGArtifactName>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
