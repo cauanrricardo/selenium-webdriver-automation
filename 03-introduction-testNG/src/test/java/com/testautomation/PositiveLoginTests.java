@@ -28,7 +28,7 @@ public class PositiveLoginTests{
         driver.get("https://practicetestautomation.com/practice-test-login/");
 
         WebElement usernameInput = driver.findElement(By.id("username"));
-        usernameInput.sendKeys("student");
+         usernameInput.sendKeys("student");
 
         WebElement passwordInput = driver.findElement(By.id("password"));
         passwordInput.sendKeys("Password123");
@@ -36,17 +36,25 @@ public class PositiveLoginTests{
         WebElement SubmitButton = driver.findElement(By.id("submit"));
         SubmitButton.click();
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
 //    Verify new page URL contains practicetestautomation.com/logged-in-successfully/
         String expectUrl = "https://practicetestautomation.com/logged-in-successfully/";
         String actualUrl = driver.getCurrentUrl(); //get the current Url
         Assert.assertEquals(actualUrl, expectUrl); //testNG
+
 //    Verify new page contains expected text ('Congratulations' or 'successfully logged in')
         String expectMessage = "Congratulations student. You successfully logged in!";
         String pageSource = driver.getPageSource();
         Assert.assertTrue(pageSource.contains(expectMessage));
+
 //    Verify button Log out is displayed on the new page
-        WebElement buttonLogOut = driver.findElement(By.cssSelector(".wp-block-button__link"));
-        Assert.assertTrue(buttonLogOut.isDisplayed());
+        WebElement LogOutButton = driver.findElement(By.cssSelector(".wp-block-button__link"));
+        Assert.assertTrue(LogOutButton .isDisplayed());
 
     }
 
