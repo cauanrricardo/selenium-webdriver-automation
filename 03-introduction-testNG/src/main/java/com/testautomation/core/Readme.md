@@ -1,7 +1,7 @@
 # 📂 Project Structure
 
 The source code is located in the `main/java` directory under the package com.testautomation.core`.
-The `com.testautomation.core` package contains two main classes:
+The `com.testautomation.core` package contain main classes:
 
 ### `DriverFactory.java`
 
