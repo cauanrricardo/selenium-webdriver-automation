@@ -32,15 +32,15 @@ public class NegativePasswordTest {
 //        Type username student into Username field
         driver.findElement(By.id("username")).sendKeys("student");
 //        Type password incorrectPassword into Password field
-        driver.findElement(By.id("password")).sendKeys(" incorrectPassword");
+        driver.findElement(By.id("password")).sendKeys("incorrectPassword");
 //        Push Submit button
         WebElement submitButton = driver.findElement(By.id("submit"));
         submitButton.click();
-        WebElement erroMessage = driver.findElement(By.id("error"));
+        WebElement errorMessage = driver.findElement(By.id("error"));
 //        Verify error message is displayed
-        Assert.assertTrue(erroMessage.isDisplayed());
+        Assert.assertTrue(errorMessage.isDisplayed(), "Error message should be visible");
 //        Verify error message text is Your password is invalid!
-        Assert.assertEquals(erroMessage.getText(), "Your password is invalid!");
+        Assert.assertEquals(errorMessage.getText(), "Your password is invalid!", "Incorrect error message text");
 
     }
 }

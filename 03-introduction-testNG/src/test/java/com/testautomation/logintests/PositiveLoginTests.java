@@ -1,4 +1,4 @@
-package com.testautomation;
+package com.testautomation.logintests;
 
 
 import com.testautomation.core.DriverFactory;

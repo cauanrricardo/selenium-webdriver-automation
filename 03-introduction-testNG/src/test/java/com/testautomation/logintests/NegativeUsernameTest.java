@@ -30,15 +30,15 @@ public class NegativeUsernameTest {
 //        Type username incorrectUser into Username field
         driver.findElement(By.id("username")).sendKeys("incorrectUser");
 //        Type password Password123 into Password field
-        driver.findElement(By.id("password")).sendKeys("Password123 ");
+        driver.findElement(By.id("password")).sendKeys("Password123");
 //        Push Submit button
         WebElement submitButton = driver.findElement(By.id("submit"));
         submitButton.click();
-        WebElement erroMessage = driver.findElement(By.id("error"));
+        WebElement errorMessage = driver.findElement(By.id("error"));
 //        Verify error message is displayed
-        Assert.assertTrue(erroMessage.isDisplayed());
+        Assert.assertTrue(errorMessage.isDisplayed());
 //        Verify error message text is Your username is invalid!
-        Assert.assertEquals(erroMessage.getText(), "Your username is invalid!" );
+        Assert.assertEquals(errorMessage.getText(), "Your username is invalid!", "Incorrect error message text" );
 
     }
 }
