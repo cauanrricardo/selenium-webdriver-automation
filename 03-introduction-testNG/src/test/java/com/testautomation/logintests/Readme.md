@@ -10,8 +10,7 @@ The test classes are located in the `src/test/java/com/testautomation/logintests
 | Test Class                | Description |
 |---------------------------|--------------|
 | **PositiveLoginTests**    | Validates successful login using correct username and password. |
-| **NegativeUsernameTest**  | Verifies login failure when using an incorrect username. |
-| **NegativePasswordTest**  | Verifies login failure when using an incorrect password. |
+| **NegativeLoginTests**  | Verifies login failure when using an incorrect username and password. |
 
 
 
