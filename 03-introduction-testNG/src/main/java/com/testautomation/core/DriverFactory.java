@@ -11,4 +11,6 @@ public class DriverFactory {
         driver.manage().window().maximize(); //maximize the browser window.
         return driver; //return the driver, ready to be used.
     }
+
+
 }
