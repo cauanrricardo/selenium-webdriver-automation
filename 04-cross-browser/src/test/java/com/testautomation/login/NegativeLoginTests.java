@@ -11,11 +11,13 @@ import org.testng.annotations.Test;
 
 public class NegativeLoginTests {
 
-    private WebDriver driver;
+    private WebDriver driver, driver02;
 
     @BeforeMethod
     void setup() {
-        driver = DriverFactory.createFirefoxDriver();
+        driver = DriverFactory.createDriver("Chrome");
+        driver = DriverFactory.createDriver("firefox");
+
     }
 
     @AfterMethod
