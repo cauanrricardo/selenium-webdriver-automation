@@ -16,6 +16,7 @@ public class DriverFactory {
             case "firefox":
                 return new FirefoxDriver();
             case "edge":
+                System.setProperty("webdriver.edge.driver", "src/main/resources/msedgedriver.exe");
                 return new EdgeDriver();
             default:
                 throw new IllegalArgumentException("Invalid browser name");

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-20T17:35:24 BRT" name="CrossBrowserSuite" finished-at="2025-11-20T17:35:37 BRT" duration-ms="12689">
+    <groups>
+    </groups>
+    <test started-at="2025-11-20T17:35:24 BRT" name="EdgeTest" finished-at="2025-11-20T17:35:28 BRT" duration-ms="4039">
+      <class name="com.testautomation.login.NegativeLoginTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testautomation.login.NegativeLoginTests@35047d03]" started-at="2025-11-20T17:35:24 BRT" name="setup" finished-at="2025-11-20T17:35:25 BRT" duration-ms="689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginNegativePassword()[pri:0, instance:com.testautomation.login.NegativeLoginTests@35047d03]" started-at="2025-11-20T17:35:25 BRT" name="testLoginNegativePassword" finished-at="2025-11-20T17:35:26 BRT" duration-ms="1414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegativePassword -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testautomation.login.NegativeLoginTests@35047d03]" started-at="2025-11-20T17:35:26 BRT" name="teardown" finished-at="2025-11-20T17:35:26 BRT" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testautomation.login.NegativeLoginTests@35047d03]" started-at="2025-11-20T17:35:26 BRT" name="setup" finished-at="2025-11-20T17:35:27 BRT" duration-ms="409" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginNegativeUsername()[pri:0, instance:com.testautomation.login.NegativeLoginTests@35047d03]" started-at="2025-11-20T17:35:27 BRT" name="testLoginNegativeUsername" finished-at="2025-11-20T17:35:28 BRT" duration-ms="1372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegativeUsername -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testautomation.login.NegativeLoginTests@35047d03]" started-at="2025-11-20T17:35:28 BRT" name="teardown" finished-at="2025-11-20T17:35:28 BRT" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.testautomation.login.NegativeLoginTests -->
+    </test> <!-- EdgeTest -->
+    <test started-at="2025-11-20T17:35:28 BRT" name="FireFoxTest" finished-at="2025-11-20T17:35:37 BRT" duration-ms="8621">
+      <class name="com.testautomation.login.NegativeLoginTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testautomation.login.NegativeLoginTests@1d9b7cce]" started-at="2025-11-20T17:35:28 BRT" name="setup" finished-at="2025-11-20T17:35:30 BRT" duration-ms="1706" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginNegativePassword()[pri:0, instance:com.testautomation.login.NegativeLoginTests@1d9b7cce]" started-at="2025-11-20T17:35:30 BRT" name="testLoginNegativePassword" finished-at="2025-11-20T17:35:32 BRT" duration-ms="2110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegativePassword -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testautomation.login.NegativeLoginTests@1d9b7cce]" started-at="2025-11-20T17:35:32 BRT" name="teardown" finished-at="2025-11-20T17:35:32 BRT" duration-ms="534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testautomation.login.NegativeLoginTests@1d9b7cce]" started-at="2025-11-20T17:35:32 BRT" name="setup" finished-at="2025-11-20T17:35:34 BRT" duration-ms="1651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginNegativeUsername()[pri:0, instance:com.testautomation.login.NegativeLoginTests@1d9b7cce]" started-at="2025-11-20T17:35:34 BRT" name="testLoginNegativeUsername" finished-at="2025-11-20T17:35:36 BRT" duration-ms="2097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegativeUsername -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testautomation.login.NegativeLoginTests@1d9b7cce]" started-at="2025-11-20T17:35:36 BRT" name="teardown" finished-at="2025-11-20T17:35:37 BRT" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.testautomation.login.NegativeLoginTests -->
+    </test> <!-- FireFoxTest -->
+  </suite> <!-- CrossBrowserSuite -->
+</testng-results>
