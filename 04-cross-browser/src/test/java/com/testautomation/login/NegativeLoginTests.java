@@ -7,16 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class NegativeLoginTests {
 
-    private WebDriver driver, driver02;
+    private WebDriver driver;
 
     @BeforeMethod
-    void setup() {
-        driver = DriverFactory.createDriver("Chrome");
-        driver = DriverFactory.createDriver("firefox");
+    @Parameters({"browser"})
+    void setup(String browser) {
+        driver = DriverFactory.createDriver(browser);
 
     }
 
