@@ -10,6 +10,6 @@ This is a TestNG XML configuration file for running automated tests on multiple 
 
 ## Tests description
 
-- **ChromeTest:** Runs tests with the browser parameter set to Chrome.
+- **EdgeTest:** Runs tests with the browser parameter set to Edge.
 - **FireFoxTest:** Runs tests with the browser parameter set to Firefox.
 
