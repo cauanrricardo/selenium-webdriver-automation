@@ -14,17 +14,15 @@ import org.testng.annotations.Test;
 public class LoginTests{
     WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp(){
         driver = DriverFactory.createFirefoxDriver();
     }
-
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown(){
         driver.quit();
     }
-
-    @Test
+    @Test(groups = {"positive", "regression", "smoke"})
     public void  testLoginFunctionality(){
 //    Test case 1: Positive LogIn test
         driver.get("https://practicetestautomation.com/practice-test-login/");
@@ -60,7 +58,7 @@ public class LoginTests{
 
     }
 
-    @Test
+    @Test(groups = {"negative", "regression"})
     public void testLoginNegativeUsername(){
 //        Test case 2: Negative username test
 //
@@ -81,7 +79,7 @@ public class LoginTests{
 
     }
 
-    @Test
+    @Test(groups = {"negative", "regression"})
     public void testLoginNegativePassword(){
 //        Test case 3: Negative password test
 //
