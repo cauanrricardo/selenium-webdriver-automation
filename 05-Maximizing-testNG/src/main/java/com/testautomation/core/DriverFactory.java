@@ -1,16 +1,19 @@
+
 package com.testautomation.core;
 /*
  * class used for code reuse in other projects.*/
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions; // 1. Importar Options
 
 public class DriverFactory {
+
     public static WebDriver createFirefoxDriver(){
-        WebDriver driver = new FirefoxDriver(); //create a webdriver instance for firefox
-        driver.manage().window().maximize(); //maximize the browser window.
-        return driver; //return the driver, ready to be used.
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        options.addArguments("--width=1920");
+        options.addArguments("--height=1080");
+        WebDriver driver = new FirefoxDriver(options);
+        return driver;
     }
-
-
 }

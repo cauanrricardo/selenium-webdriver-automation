@@ -11,14 +11,30 @@
         </classes>
     </test>
 
-    <test name="Negative Tests">
-        <groups>
-            <run>
-                <exclude name="positive"/>
-            </run>
-        </groups>
+<!-- NEGATIVE LOGIN TEST-->
+    <test name="Incorrect Username Test">
+        <parameter name="username" value="incorrectUser"></parameter>
+        <parameter name="password" value="Password123"></parameter>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!"></parameter>
         <classes>
-            <class name="com.testautomation.login.LoginTests"/>
+            <class name="com.testautomation.login.LoginTests">
+            <methods>
+                <include name="testLoginNegative"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Incorrect Password Test">
+        <parameter name="username" value="student"></parameter>
+        <parameter name="password" value="incorrectPassword"></parameter>
+        <parameter name="expectedErrorMessage" value="Your password is invalid!"></parameter>
+        <classes>
+            <class name="com.testautomation.login.LoginTests">
+                <methods>
+                    <include name="testLoginNegative"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
