@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="16.9" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="surefire.suiteXmlFiles" value="src/test/resources/FullRegressionSuite.xml"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/test-classes:/home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/classes:/home/cauanricardoribeiro/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/home/cauanricardoribeiro/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/cauanricardoribeiro/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/cauanricardoribeiro/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/cauanricardoribeiro/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/cauanricardoribeiro/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/home/cauanricardoribeiro/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/home/cauanricardoribeiro/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/home/cauanricardoribeiro/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/cauanricardoribeiro/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/home/cauanricardoribeiro/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/temurin-21-jdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/surefire/surefirebooter-20251202180738503_3.jar /home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/surefire 2025-12-02T18-07-38_457-jvmRun1 surefire-20251202180738503_1tmp surefire_0-20251202180738503_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/test-classes:/home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/classes:/home/cauanricardoribeiro/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/cauanricardoribeiro/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/home/cauanricardoribeiro/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/home/cauanricardoribeiro/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/cauanricardoribeiro/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/cauanricardoribeiro/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/cauanricardoribeiro/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/cauanricardoribeiro/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/home/cauanricardoribeiro/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/home/cauanricardoribeiro/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/home/cauanricardoribeiro/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/home/cauanricardoribeiro/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/cauanricardoribeiro/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/home/cauanricardoribeiro/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/cauanricardoribeiro"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/usr/lib/jvm/temurin-21-jdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/cauanricardoribeiro/Selenium/06-Debugging-selenium"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/cauanricardoribeiro/Selenium/06-Debugging-selenium/target/surefire/surefirebooter-20251202180738503_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-LTS"/>
+    <property name="user.name" value="cauanricardoribeiro"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.12.10-76061203-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
+    <property name="localRepository" value="/home/cauanricardoribeiro/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/home/cauanricardoribeiro/Selenium/06-Debugging-selenium"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.8+9-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testLoginFunctionality" classname="com.testautomation.login.LoginTests" time="2.697">
+    <system-out><![CDATA[18:07:41.280 [main] INFO  com.testautomation.login.LoginTests - Running test in firefox browser
+18:07:43.092 [main] INFO  com.testautomation.login.LoginTests - Open page successfully: Test Login | Practice Test Automation
+18:07:43.094 [main] INFO  com.testautomation.login.LoginTests - Starting testLoginFunctionality
+18:07:43.107 [main] INFO  com.testautomation.login.LoginTests - type username
+18:07:43.151 [main] INFO  com.testautomation.login.LoginTests - type password
+18:07:43.165 [main] INFO  com.testautomation.login.LoginTests - click submit button
+18:07:45.737 [main] INFO  com.testautomation.login.LoginTests - verify the login positive functionality
+18:07:45.737 [main] INFO  com.testautomation.login.LoginTests - verifying if the URL was loaded
+18:07:45.753 [main] DEBUG com.testautomation.login.LoginTests - Expect URL: https://practicetestautomation.com/logged-in-successfully/; Actual URL https://practicetestautomation.com/logged-in-successfully/
+18:07:45.754 [main] INFO  com.testautomation.login.LoginTests - Message Verify
+18:07:45.773 [main] INFO  com.testautomation.login.LoginTests - Success Message. Test Passed
+18:07:45.788 [main] INFO  com.testautomation.login.LoginTests - Button is visible. Test Passed
+18:07:45.788 [main] INFO  com.testautomation.login.LoginTests - --- Positive LogIn Test Finished ---
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/home/cauanricardoribeiro/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+]]></system-err>
+  </testcase>
+  <testcase name="testLoginNegative[incorrectUser, Password123, Your username is invalid!](1)" classname="com.testautomation.login.LoginTests" time="0.338">
+    <system-out><![CDATA[18:07:46.249 [main] INFO  com.testautomation.login.LoginTests - browser is closed
+18:07:48.289 [main] INFO  com.testautomation.login.LoginTests - Running test in firefox browser
+18:07:50.009 [main] INFO  com.testautomation.login.LoginTests - Open page successfully: Test Login | Practice Test Automation
+18:07:50.012 [main] INFO  com.testautomation.login.LoginTests - --- Starting Negative LogIn Test ---
+18:07:50.013 [main] DEBUG com.testautomation.login.LoginTests - Testing with user: incorrectUser and expect error: Your username is invalid!
+18:07:50.071 [main] INFO  com.testautomation.login.LoginTests - Typing Username: incorrectUser
+18:07:50.083 [main] INFO  com.testautomation.login.LoginTests - Typing Password
+18:07:50.315 [main] INFO  com.testautomation.login.LoginTests - Click submit button
+18:07:50.336 [main] INFO  com.testautomation.login.LoginTests - Error message element is displayed.
+18:07:50.347 [main] INFO  com.testautomation.login.LoginTests - --- Negative LogIn Test Finished ---
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginNegative[student, incorrectPassword, Your password is invalid!](1)" classname="com.testautomation.login.LoginTests" time="0.349">
+    <system-out><![CDATA[18:07:50.876 [main] INFO  com.testautomation.login.LoginTests - browser is closed
+18:07:52.894 [main] INFO  com.testautomation.login.LoginTests - Running test in firefox browser
+18:07:54.620 [main] INFO  com.testautomation.login.LoginTests - Open page successfully: Test Login | Practice Test Automation
+18:07:54.621 [main] INFO  com.testautomation.login.LoginTests - --- Starting Negative LogIn Test ---
+18:07:54.622 [main] DEBUG com.testautomation.login.LoginTests - Testing with user: student and expect error: Your password is invalid!
+18:07:54.684 [main] INFO  com.testautomation.login.LoginTests - Typing Username: student
+18:07:54.696 [main] INFO  com.testautomation.login.LoginTests - Typing Password
+18:07:54.935 [main] INFO  com.testautomation.login.LoginTests - Click submit button
+18:07:54.962 [main] INFO  com.testautomation.login.LoginTests - Error message element is displayed.
+18:07:54.971 [main] INFO  com.testautomation.login.LoginTests - --- Negative LogIn Test Finished ---
+]]></system-out>
+  </testcase>
+</testsuite>
