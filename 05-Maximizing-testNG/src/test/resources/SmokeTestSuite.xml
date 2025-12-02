@@ -11,7 +11,5 @@
             <class name="com.testautomation.login.LoginTests"/>
         </classes>
     </test>
-
-
 </suite>
 

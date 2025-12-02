@@ -4,7 +4,7 @@ package com.testautomation.core;
  * class used for code reuse in other projects.*/
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions; // 1. Importar Options
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 

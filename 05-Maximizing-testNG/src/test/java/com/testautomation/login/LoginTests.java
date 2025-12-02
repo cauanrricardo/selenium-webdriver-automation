@@ -75,7 +75,7 @@ public class LoginTests{
         WebElement errorMessage = driver.findElement(By.id("error"));
         Assert.assertTrue(errorMessage.isDisplayed());
 
-//        Verify error message text is Your username is invalid!
+//        Verify error message text is = Your (username/password) is invalid!
         String actualMessage = errorMessage.getText();
         Assert.assertEquals(actualMessage, expectedErrorMessage);
 
