@@ -13,11 +13,12 @@ import org.testng.annotations.Test;
 
 
 public class LoginTests{
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp(){
         driver = DriverFactory.createFirefoxDriver();
+        driver.get("https://practicetestautomation.com/practice-test-login/");
     }
     @AfterMethod(alwaysRun = true)
     public void tearDown(){
@@ -26,7 +27,6 @@ public class LoginTests{
     @Test(groups = {"positive", "regression", "smoke"})
     public void  testLoginFunctionality(){
 //    Test case 1: Positive LogIn test
-        driver.get("https://practicetestautomation.com/practice-test-login/");
 
         WebElement usernameInput = driver.findElement(By.id("username"));
         usernameInput.sendKeys("student");
@@ -62,9 +62,6 @@ public class LoginTests{
     @Parameters({"username", "password", "expectedErrorMessage"})
     @Test(groups = {"negative", "regression"})
     public void testLoginNegative(String username, String password, String expectedErrorMessage){
-
-//        Open page
-        driver.get("https://practicetestautomation.com/practice-test-login/");
 
 //        Actions
         driver.findElement(By.id("username")).sendKeys(username);
