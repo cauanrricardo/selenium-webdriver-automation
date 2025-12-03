@@ -10,7 +10,17 @@
         <option value="$PROJECT_DIR$/01-webdriver-basics/pom.xml" />
         <option value="$PROJECT_DIR$/02-test/pom.xml" />
         <option value="$PROJECT_DIR$/02-understanding-html-dom/pom.xml" />
+        <option value="$PROJECT_DIR$/03-introduction-testNG/pom.xml" />
+        <option value="$PROJECT_DIR$/04-cross-browser/pom.xml" />
+        <option value="$PROJECT_DIR$/04-cross-browser-test/pom.xml" />
+        <option value="$PROJECT_DIR$/04-test/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/04-cross-browser-test/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
