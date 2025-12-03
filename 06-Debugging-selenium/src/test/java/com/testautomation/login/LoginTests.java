@@ -48,7 +48,7 @@ public class LoginTests {
         logger.info("type password");
         passwordInput.sendKeys("Password123");
 
-        WebElement SubmitButton = driver.findElement(By.id("submit"));
+       WebElement SubmitButton = driver.findElement(By.id("submit"));
         logger.info("click submit button");
         SubmitButton.click();
 
