@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Ignorar as pastas de compilacao do Maven
 target/
 **/target/
+=======
+# Pastas de compilacao
+target/
 
 # Arquivos de IDE e Maven
 *.iml

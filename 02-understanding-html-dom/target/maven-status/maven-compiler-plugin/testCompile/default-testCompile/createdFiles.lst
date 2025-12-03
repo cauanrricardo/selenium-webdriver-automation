@@ -1,0 +1,5 @@
+br/com/cauan/DisableLoginTest.class
+br/com/cauan/ValidateErroMessageTest.class
+br/com/cauan/LoginErrorTest.class
+br/com/cauan/LoginSuccessTest.class
+br/com/cauan/FooterLinkTest.class

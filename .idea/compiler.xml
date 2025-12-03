@@ -6,16 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="03-introduction-testNG" />
-        <module name="01-webdriver-basics" />
-        <module name="04-cross-browser" />
-        <module name="05-Maximizing-testNG" />
-        <module name="02-understanding-html-dom" />
-        <module name="06-Debugging-selenium" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="01-webdriver-basics" target="21" />
       <module name="02-test" target="1.8" />
+      <module name="02-understanding-html-dom" target="21" />
+      <module name="04-cross-browser-test" target="21" />
+      <module name="selenium-course" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
