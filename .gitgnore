@@ -1,3 +1,7 @@
+# Pastas de compilacao
 target/
-.idea/
+
+# Arquivos de IDE e Maven
 *.iml
+.idea/
+.vscode/
