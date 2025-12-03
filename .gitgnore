@@ -1,0 +1,8 @@
+# Ignorar as pastas de compilacao do Maven
+target/
+**/target/
+
+# Arquivos de IDE e Maven
+*.iml
+.idea/
+.vscode/

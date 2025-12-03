@@ -5,5 +5,15 @@
     <file url="file://$PROJECT_DIR$/01-webdriver-basics/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/02-understanding-html-dom/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/02-understanding-html-dom/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03-introduction-testNG/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03-introduction-testNG/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-cross-browser/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-cross-browser/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05-Maximizing-testNG/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05-Maximizing-testNG/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-Debugging-selenium/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-Debugging-selenium/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
