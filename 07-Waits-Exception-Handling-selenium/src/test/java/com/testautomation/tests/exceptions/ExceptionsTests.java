@@ -47,5 +47,21 @@ public class ExceptionsTests {
 //       verify row 2 input field is displayed
         Assert.assertTrue(row2.isDisplayed(), "Row2 field is not displayed");
     }
+    @Test
+    public void  elementNotInteractableException(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        logger.info("----STARTS TESTS  ------");
+        driver.findElement(By.id("add_btn")).click();
+        By row2Input = By.cssSelector("#row2 input.input-field");
+        WebElement row2 = wait.until(ExpectedConditions.visibilityOfElementLocated(row2Input));
+        String expectString = "test 123 scott";
+        row2.sendKeys(expectString);
+        By saveButtonInput = By.name("Save");
+        String actual = row2.getAttribute("value");
+        Assert.assertEquals(actual, expectString, "ERROR");
+        WebElement saveButton = driver.findElement(saveButtonInput);
+        saveButton.click();
+
+    }
 
 }
