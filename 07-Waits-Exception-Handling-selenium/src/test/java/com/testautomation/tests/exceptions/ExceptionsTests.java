@@ -107,5 +107,21 @@ public class ExceptionsTests {
         Assert.assertEquals(actualMsg, expectMsg, "ERROR: success message incorrect");
     }
 
+    @Test
+    public void staleElementReferenceExceptionTest(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        By inst =  By.id("instructions");
+        WebElement instructionsText = driver.findElement(inst);
+
+        // Click Add button
+        By addB = By.id("add_btn");
+        WebElement addButton = driver.findElement(addB);
+        addButton.click();
+
+        // Verify instruction text element is no longer displayed
+        Assert.assertFalse(instructionsText.isDisplayed(), "Instructions text is still displayed");
+    }
+
 
 }
