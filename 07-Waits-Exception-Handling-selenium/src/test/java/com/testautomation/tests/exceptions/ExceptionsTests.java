@@ -67,7 +67,7 @@ public class ExceptionsTests {
         driver.findElement(By.id("add_btn")).click();
         By row2Input = By.cssSelector("#row2 input.input-field");
         WebElement row2 = wait.until(ExpectedConditions.visibilityOfElementLocated(row2Input));
-        String expectString = "macarrone";
+        String expectString = "macaroni";
         row2.sendKeys(expectString);
         By saveButtonInput = By.xpath("//*[@id='row2']//button[@name='Save']\n");
         WebElement saveButton = driver.findElement(saveButtonInput);
@@ -83,6 +83,28 @@ public class ExceptionsTests {
         String expectMsg = "Row 2 was saved";
         Assert.assertEquals(actualMsg, expectMsg, "ERROR: success message incorrect");
 
+    }
+    @Test
+    public void invalidElementStateExceptionTest(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        By row1Input = By.cssSelector("#row1 input.input-field");
+      By editButton = By.id("edit_btn");
+      WebElement buttonEdit =  wait.until(ExpectedConditions.visibilityOfElementLocated(editButton));
+      buttonEdit.click();
+        WebElement row1 = wait.until(ExpectedConditions.visibilityOfElementLocated(row1Input));
+        row1.clear();
+        logger.info("Clear input successfully");
+        row1.sendKeys("macaroni");
+
+        By saveButtonInput = By.xpath("//*[@id='row1']//button[@name='Save']\n");
+        WebElement saveButton = driver.findElement(saveButtonInput);
+        saveButton.click();
+
+        By message = By.id("confirmation");
+        WebElement confirmationMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(message));
+        String actualMsg = confirmationMsg.getText();
+        String expectMsg = "Row 1 was saved";
+        Assert.assertEquals(actualMsg, expectMsg, "ERROR: success message incorrect");
     }
 
 
