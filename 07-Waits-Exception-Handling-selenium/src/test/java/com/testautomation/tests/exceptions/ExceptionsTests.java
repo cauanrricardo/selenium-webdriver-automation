@@ -112,15 +112,15 @@ public class ExceptionsTests {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         By inst =  By.id("instructions");
-        WebElement instructionsText = driver.findElement(inst);
 
         // Click Add button
         By addB = By.id("add_btn");
         WebElement addButton = driver.findElement(addB);
         addButton.click();
 
-        // Verify instruction text element is no longer displayed
-        Assert.assertFalse(instructionsText.isDisplayed(), "Instructions text is still displayed");
+        // Verify instruction text element is no longer displayed]
+        Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOfElementLocated(inst)), "Instructions text is still displayed");
+
     }
 
 
