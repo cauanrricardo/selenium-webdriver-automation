@@ -47,21 +47,43 @@ public class ExceptionsTests {
 //       verify row 2 input field is displayed
         Assert.assertTrue(row2.isDisplayed(), "Row2 field is not displayed");
     }
+
     @Test
-    public void  elementNotInteractableException(){
+    public void timeoutExceptionTest(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+//       CLick add button
+        driver.findElement(By.xpath("//*[@id=\"add_btn\"]")).click();
+        By row2Input = By.cssSelector("#row2 input.input-field");
+        WebElement row2 =   wait.until(ExpectedConditions.visibilityOfElementLocated(row2Input));
+
+//       verify row 2 input field is displayed
+        Assert.assertTrue(row2.isDisplayed(), "Row2 field is not displayed");
+    }
+
+    @Test
+    public void elementNotInteractableExceptionTest(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         logger.info("----STARTS TESTS  ------");
         driver.findElement(By.id("add_btn")).click();
         By row2Input = By.cssSelector("#row2 input.input-field");
         WebElement row2 = wait.until(ExpectedConditions.visibilityOfElementLocated(row2Input));
-        String expectString = "test 123 scott";
+        String expectString = "macarrone";
         row2.sendKeys(expectString);
-        By saveButtonInput = By.name("Save");
-        String actual = row2.getAttribute("value");
-        Assert.assertEquals(actual, expectString, "ERROR");
+        By saveButtonInput = By.xpath("//*[@id='row2']//button[@name='Save']\n");
         WebElement saveButton = driver.findElement(saveButtonInput);
         saveButton.click();
 
+        String actual = row2.getAttribute("value");
+        Assert.assertEquals(actual, expectString, "ERROR");
+
+        By message = By.id("confirmation");
+        WebElement confirmationMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(message));
+
+        String actualMsg = confirmationMsg.getText();
+        String expectMsg = "Row 2 was saved";
+        Assert.assertEquals(actualMsg, expectMsg, "ERROR: success message incorrect");
+
     }
+
 
 }
