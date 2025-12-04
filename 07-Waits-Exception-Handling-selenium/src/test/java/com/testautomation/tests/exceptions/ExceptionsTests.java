@@ -38,10 +38,11 @@ public class ExceptionsTests {
 
     @Test
     public void noSuchElementExceptionTest(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
 //       CLick add button
         driver.findElement(By.xpath("//*[@id=\"add_btn\"]")).click();
-        WebElement row2 =   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div/section/section/div/div[3]/div/input")));
+        By row2Input = By.cssSelector("#row2 input.input-field");
+        WebElement row2 =   wait.until(ExpectedConditions.visibilityOfElementLocated(row2Input));
 
 //       verify row 2 input field is displayed
         Assert.assertTrue(row2.isDisplayed(), "Row2 field is not displayed");
