@@ -77,8 +77,8 @@ public class LoginTests {
 
 
 //    Verify button Log out is displayed on the new page
-        WebElement LogOutButton = driver.findElement(By.cssSelector(".wp-block-button__link"));
-        Assert.assertTrue(LogOutButton .isDisplayed());
+        WebElement logOutButton = driver.findElement(By.linkText("Log out"));
+        Assert.assertTrue(logOutButton .isDisplayed());
         logger.info("Button is visible. Test Passed");
         logger.info("--- Positive LogIn Test Finished ---");
 
