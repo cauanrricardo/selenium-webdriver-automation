@@ -1,5 +1,5 @@
 
-package com.testautomation;
+package com.testautomation.core;
 /*
  * class used for code reuse in other projects.*/
 
