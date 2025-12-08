@@ -10,18 +10,12 @@ import java.time.Duration;
 public class SuccessfulLoginPage {
 
     private WebDriver driver;
-    private By  logOutButtonInsert = By.linkText("Log out");
+    private By logOutButtonInsert = By.linkText("Log out");
     private WebDriverWait wait;
 
     public SuccessfulLoginPage(WebDriver driver){
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
-    public String  getCurrentUrl(){
-        return driver.getCurrentUrl();
-    }
-    public String getPageSource(){
-        return  driver.getPageSource();
     }
     public boolean isLogoutButtonDisplayed(){
         try {
