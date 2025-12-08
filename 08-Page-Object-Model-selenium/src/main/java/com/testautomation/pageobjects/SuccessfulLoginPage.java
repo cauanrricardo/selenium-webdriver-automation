@@ -3,18 +3,17 @@ package com.testautomation.pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginSuccesfulyPage {
+public class SuccessfulLoginPage {
 
     private WebDriver driver;
     private By  logOutButtonInsert = By.linkText("Log out");
     private WebDriverWait wait;
 
-    public LoginSuccesfulyPage(WebDriver driver){
+    public SuccessfulLoginPage(WebDriver driver){
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
@@ -24,7 +23,7 @@ public class LoginSuccesfulyPage {
     public String getPageSource(){
         return  driver.getPageSource();
     }
-    public boolean ButtonLogOutOn(){
+    public boolean isLogoutButtonDisplayed(){
         try {
             return driver.findElement(logOutButtonInsert).isDisplayed();
         } catch (NoSuchElementException e) {

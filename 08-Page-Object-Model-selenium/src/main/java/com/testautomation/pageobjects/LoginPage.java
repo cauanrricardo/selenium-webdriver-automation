@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 
 public class LoginPage {
 
@@ -19,6 +21,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver){
             this.driver = driver;
+            this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         }
 
         public void enterUsername(String username){
@@ -30,10 +33,11 @@ public class LoginPage {
         public void clickSubmitButton(){
             driver.findElement(submitButtonLocator).click();
         }
-        public void executeLogin(String username, String password){
+        public SuccessfulLoginPage executeLogin(String username, String password){
             enterPassword(username);
             enterPassword(password);
             clickSubmitButton();
+    return  new SuccessfulLoginPage(driver);
         }
         public String getErrorMessage(){
             WebElement errorMessageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessageLocator));
