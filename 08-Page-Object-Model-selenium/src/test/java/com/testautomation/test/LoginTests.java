@@ -2,6 +2,8 @@ package com.testautomation.test;
 
 
 import com.testautomation.core.DriverFactory;
+import com.testautomation.pageobjects.LoginPage;
+import com.testautomation.pageobjects.SuccessfulLoginPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -23,8 +25,6 @@ public class LoginTests {
         driver = DriverFactory.createFirefoxDriver();
         logger.info("Running test in firefox browser");
 
- //      open page
-        driver.get("https://practicetestautomation.com/practice-test-login/");
         logger.info("Open page successfully: " + driver.getTitle());
     }
 
@@ -37,47 +37,30 @@ public class LoginTests {
     public void  testLoginFunctionality(){
 //    Test case 1: Positive LogIn test
         logger.info("Starting testLoginFunctionality");
-
-        WebElement usernameInput = driver.findElement(By.id("username"));
-        logger.info("type username");
-        usernameInput.sendKeys("student");
-
-        WebElement passwordInput = driver.findElement(By.id("password"));
-        logger.info("type password");
-        passwordInput.sendKeys("Password123");
-
-       WebElement SubmitButton = driver.findElement(By.id("submit"));
-        logger.info("click submit button");
-        SubmitButton.click();
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.visit();
+        SuccessfulLoginPage successfulLoginPage = loginPage.executeLogin("student", "Password123"); //move to new page (success)
+        successfulLoginPage.load();
 
        logger.info("verify the login positive functionality");
+
         logger.info("verifying if the URL was loaded");
 //    Verify new page URL contains practicetestautomation.com/logged-in-successfully/
-        String expectUrl = "https://practicetestautomation.com/logged-in-successfully/";
-        String actualUrl = driver.getCurrentUrl(); //get the current Url
-        //debug
-        logger.debug("Expect URL: {}; Actual URL {}", expectUrl, actualUrl);
-        Assert.assertEquals(actualUrl, expectUrl); //testNG
-
+        String expectPath = "logged-in-successfully";
+        String actualUrl = successfulLoginPage.getCurrentUrl();
+        Assert.assertTrue(actualUrl.contains(expectPath), "URL did not contain expected path. Actual: " + actualUrl);
 
         logger.info("Message Verify");
 //    Verify new page contains expected text ('Congratulations' or 'successfully logged in')
         String expectMessage = "Congratulations student. You successfully logged in!";
-        String pageSource = driver.getPageSource();
-        Assert.assertTrue(pageSource.contains(expectMessage));
+        String pageSource = successfulLoginPage.getPageSource();
+        Assert.assertTrue(pageSource.contains(expectMessage), "Success message was not displayed.");
         logger.info("Success Message. Test Passed");
 
-
 //    Verify button Log out is displayed on the new page
-        WebElement logOutButton = driver.findElement(By.linkText("Log out"));
-        Assert.assertTrue(logOutButton .isDisplayed());
+        Assert.assertTrue(successfulLoginPage.isLogoutButtonDisplayed());
         logger.info("Button is visible. Test Passed");
+
         logger.info("--- Positive LogIn Test Finished ---");
 
     }
@@ -86,23 +69,10 @@ public class LoginTests {
     @Test(groups = {"negative", "regression"})
     public void testLoginNegative(String username, String password, String expectedErrorMessage){
         logger.info("--- Starting Negative LogIn Test ---");
-        logger.debug("Testing with user: {} and expect error: {}", username, expectedErrorMessage);
-//        Actions
-        driver.findElement(By.id("username")).sendKeys(username);
-        logger.info("Typing Username: " + username);
-        driver.findElement(By.id("password")).sendKeys(password);
-        logger.info("Typing Password");
-        driver.findElement(By.id("submit")).click();
-        logger.info("Click submit button" );
-
-//        Verify error message is displayed
-        WebElement errorMessage = driver.findElement(By.id("error"));
-        Assert.assertTrue(errorMessage.isDisplayed());
-        logger.info("Error message element is displayed.");
-
-//        Verify error message text is = Your (username/password) is invalid!
-        String actualMessage = errorMessage.getText();
-        Assert.assertEquals(actualMessage, expectedErrorMessage);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.visit();
+        loginPage.executeLogin(username, password);
+        Assert.assertEquals(loginPage.getErrorMessage(), expectedErrorMessage);
         logger.info("--- Negative LogIn Test Finished ---");
 
     }

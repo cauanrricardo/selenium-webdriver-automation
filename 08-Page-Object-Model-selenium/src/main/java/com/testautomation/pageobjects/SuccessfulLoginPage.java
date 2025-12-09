@@ -19,4 +19,7 @@ public class SuccessfulLoginPage extends BasePage {
        return  isDisplayed(logOutButtonInsert);
 
     }
+    public void load(){
+        waitForElement(logOutButtonInsert);
+    }
 }

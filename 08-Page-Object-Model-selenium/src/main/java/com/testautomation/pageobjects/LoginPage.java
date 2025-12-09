@@ -18,10 +18,12 @@ public class LoginPage  extends BasePage {
         private By submitButtonLocator = By.id("submit");
         private By errorMessageLocator = By.id("error");
 
-    public LoginPage(WebDriver driver){
-        super(driver);
+        public LoginPage (WebDriver driver){
+             super(driver);
         }
-
+        public void visit(){
+            super.visit("https://practicetestautomation.com/practice-test-login/");
+        }
         public void enterUsername(String username){
             driver.findElement(usarnameInputLocator).sendKeys(username);
         }
@@ -32,7 +34,7 @@ public class LoginPage  extends BasePage {
             driver.findElement(submitButtonLocator).click();
         }
         public SuccessfulLoginPage executeLogin(String username, String password){
-            enterPassword(username);
+            enterUsername(username);
             enterPassword(password);
             clickSubmitButton();
             return  new SuccessfulLoginPage(driver);
