@@ -1,14 +1,9 @@
 package com.testautomation.pageobjects;
 
 
-import com.testautomation.core.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 
 public class LoginPage  extends BasePage {
@@ -31,7 +26,7 @@ public class LoginPage  extends BasePage {
             driver.findElement(passwordInputLocator).sendKeys(password);
         }
         public void clickSubmitButton(){
-            driver.findElement(submitButtonLocator).click();
+            click(submitButtonLocator);
         }
         public SuccessfulLoginPage executeLogin(String username, String password){
             enterUsername(username);

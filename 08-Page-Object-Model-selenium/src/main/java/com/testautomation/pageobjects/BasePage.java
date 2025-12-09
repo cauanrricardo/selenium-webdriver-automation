@@ -1,4 +1,4 @@
-package com.testautomation.core;
+package com.testautomation.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -32,6 +32,15 @@ public class BasePage {
     protected WebElement waitForElement(By locator){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+    protected  void click(By locator){
+        WebElement element = waitForElement(locator);
+        element.click();
+    }
+    protected void sendKeys(By locator, String text){
+        WebElement element = waitForElement(locator);
+        element.click();
+        element.sendKeys(text);
+    }
     protected boolean isDisplayed(By locator){
         try {
             return driver.findElement(locator).isDisplayed();
@@ -40,4 +49,8 @@ public class BasePage {
         }
 
     }
+    protected boolean waitUntilInvisible(By locator) {
+        return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
 }
