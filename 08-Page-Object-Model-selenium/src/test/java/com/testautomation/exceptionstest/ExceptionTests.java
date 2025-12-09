@@ -1,31 +1,11 @@
 package com.testautomation.exceptionstest;
 
-import com.testautomation.core.DriverFactory;
-import com.testautomation.pageobjects.ExceptionsPage;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import com.testautomation.BaseTest;
 
-public class ExceptionTests {
-    private WebDriver driver;
-    private ExceptionsPage exceptionsPage;
-
-    @BeforeMethod
-    void setup(){
-        driver = DriverFactory.createFirefoxDriver();
-        exceptionsPage = new ExceptionsPage(driver);
-        exceptionsPage.visit();
-    }
-
-    @AfterMethod
-    void tearDown(){
-        if(driver != null){
-            driver.quit();
-        }
-    }
+public class ExceptionTests extends BaseTest {
 
     @Test
     public void noSuchElementExceptionTest() {
