@@ -38,7 +38,7 @@ public class BasePage {
     }
     protected void sendKeys(By locator, String text){
         WebElement element = waitForElement(locator);
-        element.click();
+        element.clear();
         element.sendKeys(text);
     }
     protected boolean isDisplayed(By locator){
@@ -47,7 +47,6 @@ public class BasePage {
         } catch (NoSuchElementException e) {
             return false;
         }
-
     }
     protected boolean waitUntilInvisible(By locator) {
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));

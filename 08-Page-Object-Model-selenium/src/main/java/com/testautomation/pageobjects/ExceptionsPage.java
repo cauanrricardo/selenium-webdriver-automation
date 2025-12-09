@@ -8,7 +8,8 @@ public class ExceptionsPage extends BasePage {
 
     private By addButtonLocator = By.id("add_btn");
     private By row2InputLocator = By.cssSelector("#row2 input.input-field");
-    private By saveButtonLocator = By.xpath("//*[@id='row2']//button[@name='Save']");
+    private By saveRow1ButtonLocator = By.xpath("//*[@id='row1']//button[@name='Save']");
+    private By saveRow2ButtonLocator = By.xpath("//*[@id='row2']//button[@name='Save']");
     private By confirmationMessageLocator = By.id("confirmation");
     private By row1InputLocator = By.cssSelector("#row1 input.input-field");
     private By editButtonLocator = By.id("edit_btn");
@@ -35,8 +36,8 @@ public class ExceptionsPage extends BasePage {
     public String getRow2Value(){
         return getRow2Input().getAttribute("value");
     }
-    public void clickSaveButton(){
-        click(saveButtonLocator);
+    public void clickSaveRow1(){
+        click(saveRow1ButtonLocator);
     }
     public String getConfirmationMessage(){
        WebElement element=  waitForElement(confirmationMessageLocator);
@@ -56,6 +57,9 @@ public class ExceptionsPage extends BasePage {
     }
     public String getRow1Value(){
         return getRow1Input().getAttribute("value");
+    }
+    public void clickSaveRow2() {
+        click(saveRow2ButtonLocator);
     }
     public boolean waitInstructionToDisappear(){
         return  waitUntilInvisible(instructionLocator);
