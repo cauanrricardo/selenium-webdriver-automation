@@ -11,5 +11,4 @@ This module focuses on implementing cross-browser test automation using Selenium
 - Manage multiple browser drivers efficiently
 - Generate comprehensive test reports for cross-browser results
 
-- 
 *All exercises were developed and executed using IntelliJ IDEA, Firefox,Edge, TestNG, and Maven on Linux.*
