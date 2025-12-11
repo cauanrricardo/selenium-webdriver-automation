@@ -18,7 +18,7 @@ The project is structured like a real-world automation framework and demonstrate
 
 ##  What You Will Find Here
 
-- Each module may include, depending on its scope and level of completion:
+-** Each module may include, depending on its scope and level of completion:**
 
 - Practical automation scripts
 - A README explaining the key concepts covered
